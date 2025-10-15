@@ -47,11 +47,14 @@ def register_device(
                 content=""
             )
 
-        if not device_config.macAddress:
+        if not device_config.macAddress or device_config.model or device_config.location or device_config.macAddress:
             return JSONResponse(
                 status_code=status.HTTP_400_BAD_REQUEST,
                 content=""
             )
+
+
+
 
         # etc ...
 
