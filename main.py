@@ -21,7 +21,16 @@ def main():
     app.add_exception_handler(InvalidInputException, invalid_input_exception_handler)
     app.add_exception_handler(ConflictException, conflict_exception_handler)
 
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+
+
+
+
+    print("Done!")
+
+
 
 if __name__ == '__main__':
     main()
